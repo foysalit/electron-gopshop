@@ -1,7 +1,6 @@
 'use strict';
 const app = require('app');
 const BrowserWindow = require('browser-window');
-const Skype = require('./modules/skype/index');
 
 // report crashes to the Electron project
 require('crash-reporter').start();
@@ -45,8 +44,4 @@ app.on('activate-with-no-open-windows', function () {
 
 app.on('ready', function () {
 	mainWindow = createMainWindow();
-	var skype = new Skype();
-	skype.getContacts().then(function (contacts) {
-		console.log(contacts);
-	});
 });

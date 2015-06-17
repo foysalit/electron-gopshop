@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="index.css">
+		<script src="client/skype.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -11,7 +12,11 @@
 				<h1>Welcome to GopShop</h1>
 			</header>
 			<section class="main">
-				
+				<ul id="contacts">
+					<li v-repeat="items" class="item-{{$index}}">
+						{{dataValues.fullname}} {{dataValues.skypename}}
+					</li>
+				</ul>
 			</section>
 			<footer></footer>
 		</div>

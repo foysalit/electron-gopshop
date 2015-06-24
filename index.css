@@ -4,6 +4,10 @@ body {
 	margin: 0;
 }
 
+.main {
+	max-width: 100%;
+}
+
 header {
 	position: absolute;
 	width: 500px;

@@ -3,21 +3,29 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="client/semantic/dist/semantic.min.css">
 		<link rel="stylesheet" href="index.css">
+		<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="client/skype.js"></script>
+		<script src="client/semantic/dist/semantic.min.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<h1>Welcome to GopShop</h1>
-			</header>
-			<section class="main">
-				<ul id="contacts">
-					<li v-repeat="items" class="item-{{$index}}">
-						{{dataValues.fullname}} {{dataValues.skypename}}
-					</li>
-				</ul>
+		<div class="ui container">
+			<section class="main ui grid">
+				<div class="four wide column centered">
+					<div class="ui divided list" id="contacts">
+						<div class="item" v-repeat="items" class="item-{{$index}}">
+							<div class="right floated compact ui button">Add</div>
+							<img class="ui avatar image" src="http://placehold.it/100/100.jpg">
+
+							<div class="content">
+								<div class="header"> {{ dataValues.fullname }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
+
 			<footer></footer>
 		</div>
 	</body>
